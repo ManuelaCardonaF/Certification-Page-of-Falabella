@@ -1,0 +1,32 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.0.81")
+    }
+}
+
+plugins {
+    id 'java'
+}
+apply plugin: 'net.serenity-bdd.aggregator'
+
+group 'com.co.test.certification.tiendaOnlineFalabella'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation('net.serenity-bdd:serenity-screenplay:2.0.15')
+    implementation('net.serenity-bdd:serenity-cucumber:1.9.20')
+    implementation('net.serenity-bdd:serenity-junit:2.0.15')
+    implementation('net.serenity-bdd:serenity-core:2.0.15')
+    testImplementation('junit:junit:4.12')
+
+}
+
